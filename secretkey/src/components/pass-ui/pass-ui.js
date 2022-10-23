@@ -19,6 +19,19 @@ const PassUI = (props) => {
         props.updateText(event.target.value);
     }
 
+    const handleCopy = (event) => {
+        navigator.clipboard.writeText(props.text).then(
+            (data) => {
+              /* clipboard successfully set */
+              console.log('success', data);
+            },
+            (error) => {
+              /* clipboard write failed */
+              console.log('error', error)
+            }
+          );
+    }
+
     return (
     <>
     <div className="input-container" id='input-container'>
@@ -40,7 +53,9 @@ const PassUI = (props) => {
                 onChange={handleTextChange} 
                 value={props.text}>
             </textarea>
-            
+    </div>
+    <div className="text-container">
+        <button name="copy" onClick={handleCopy}>Copy To clipboard!</button>
     </div>
     </>
     );

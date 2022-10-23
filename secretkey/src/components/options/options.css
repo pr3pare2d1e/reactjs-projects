@@ -13,6 +13,24 @@
     -webkit-animation: rotateAngle 6s linear infinite;
             animation: rotateAngle 6s linear infinite;
   }
+
+  @media screen and (min-width: 600px) {
+    .btn-box button {
+      display: block;
+      position: relative;
+      margin: 0 0;
+      padding: 0.1em 0.2em;
+      border-radius: 0.1em;
+      text-transform: uppercase;
+      font-size: small;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 500;
+      letter-spacing: 0;
+      mix-blend-mode: color-dodge;
+      perspective: 500px;
+      transform-style: preserve-3d;
+    }
+  }
   
   .btn-box button {
     display: block;
