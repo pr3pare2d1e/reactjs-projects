@@ -6,6 +6,12 @@ This repository is intended for unrelated ReactJS projects. They do not accurate
 
 
 
+## Projects
+
+- SecretKey - App to decrypt and encrypt Text.
+
+
+
 ## Authors
 
 - [@pr3pare2d1e](https://github.com/pr3pare2d1e)
