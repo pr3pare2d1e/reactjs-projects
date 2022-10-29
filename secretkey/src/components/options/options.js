@@ -7,22 +7,26 @@ import './options.css';
 */
 
 const Options = (props) => {
+  const {
+    processType, // the value for which action type the user is in
+    handleProcessChange // function to update option
+  } = props;
 
   const handleSelect = (event) => {
-    if(props.processType !== event.target.value){
+    if(processType !== event.target.value){
       console.info(`ProcessType UPDATE: ${event.target.value}`);
-      props.handleProcessChange(event.target.value);
+      handleProcessChange(event.target.value);
     }
   }
     return (
         <div className='options'>
             <div className='btn-box'>
-              <button value="encrypt" onClick={handleSelect}>
+              <button value="encrypt" className={processType === 'encrypt' ? 'active': ''} onClick={handleSelect}>
                 Encrypt
               </button>
             </div>
             <div className='btn-box'>
-              <button value="decrypt" onClick={handleSelect}>
+              <button value="decrypt" className={processType === 'decrypt' ? 'active': ''} onClick={handleSelect}>
                   Decrypt
               </button>
             </div>

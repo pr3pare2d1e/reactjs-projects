@@ -1,5 +1,8 @@
 var CryptoJS = require("crypto-js");
 
+/*
+* This file handles the encrypt and decrypt functions and will feed results back
+*/
 export function startEncryption(secretKey, text) {
     console.info(`Encrypting with Secret Key: ${secretKey.replaceAll(secretKey,'******')}`);
     const encrypted = CryptoJS.AES.encrypt(text, secretKey);

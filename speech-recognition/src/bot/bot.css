@@ -1,0 +1,11 @@
+.bot-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}

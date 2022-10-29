@@ -31,6 +31,9 @@ function App() {
 
   return (
     <main className="main">
+      <header>
+        <h2>{processType === 'encrypt' ? 'Encrypt': 'Decrypt'} Your Secrets!</h2>
+      </header>
         <Options processType={processType} handleProcessChange={setProcessType} />
         <div className='container'>
             <PassUI processType={processType} text={text} updateText={setText} handleProcess={handleProcess}/>
